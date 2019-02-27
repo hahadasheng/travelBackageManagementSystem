@@ -1,0 +1,61 @@
+
+
+<!-- 内容头部 -->
+<section class="content-header">
+    <h1>
+        角色管理 <small>添加权限</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="../index.jsp"><i
+                class="fa fa-dashboard"></i> 首页</a></li>
+        <li><a
+                href="../role/findAll.do">角色管理</a></li>
+        <li class="active">添加权限资源表单</li>
+    </ol>
+</section>
+<!-- 内容头部 /-->
+<form action="../role/addPermissionToRole.do" method="post">
+    <!-- 正文区域 -->
+    <section class="content"> <input type="hidden" name="roleId"
+                                     value="2">
+        <table id="dataList"
+               class="table table-bordered table-striped table-hover dataTable">
+            <thead>
+            <tr>
+                <th class="" style="padding-right: 0px">
+                    <input id="selall"
+                           type="checkbox" class="icheckbox_square-blue"></th>
+                <th class="sorting_asc">ID</th>
+                <th class="sorting">权限名称</th>
+                <th class="sorting">URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input name="ids" type="checkbox" value="1">
+                </td>
+                <td>1</td>
+                <td>产品修改</td>
+                <td>/product/update.do</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--订单信息/--> <!--工具栏-->
+        <div class="box-tools text-center">
+            <button type="submit" class="btn bg-maroon">保存</button>
+            <button type="button" class="btn bg-default"
+                    onclick="history.back(-1);">返回</button>
+        </div>
+        <!--工具栏/--> </section>
+    <!-- 正文区域 /-->
+</form>
+
+<script>
+    $(function () {
+        init();
+    });
+
+
+
+
+</script>

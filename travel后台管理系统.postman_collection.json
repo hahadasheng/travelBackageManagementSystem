@@ -1,0 +1,665 @@
+{
+	"info": {
+		"_postman_id": "92bd04e2-b985-49a0-9a90-ce89f52e6a19",
+		"name": "travel后台管理系统",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登陆管理",
+			"item": [
+				{
+					"name": "用户登陆",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/login?username=008&password=abc123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "008"
+								},
+								{
+									"key": "password",
+									"value": "abc123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "退出登陆操作",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "产品管理",
+			"item": [
+				{
+					"name": "产品分页查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/product/findAll?pageNum=2&pageSize=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"product",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新建产品",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/product/saveProduct?productNum=number_007&productName=新产品上线&cityName=月球&departureTime=2019-02-14 12:20&productPrice=998&productDesc=月球之行&productStatus=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"product",
+								"saveProduct"
+							],
+							"query": [
+								{
+									"key": "productNum",
+									"value": "number_007"
+								},
+								{
+									"key": "productName",
+									"value": "新产品上线"
+								},
+								{
+									"key": "cityName",
+									"value": "月球"
+								},
+								{
+									"key": "departureTime",
+									"value": "2019-02-14 12:20"
+								},
+								{
+									"key": "productPrice",
+									"value": "998"
+								},
+								{
+									"key": "productDesc",
+									"value": "月球之行"
+								},
+								{
+									"key": "productStatus",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "订单管理",
+			"item": [
+				{
+					"name": "订单分页查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/order/findAll?pageNum=2&pageSize=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "2"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "订单详情页查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/order/findById?id=0E7231DC797C486290E8713CA3C6ECCC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order",
+								"findById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0E7231DC797C486290E8713CA3C6ECCC"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "用户管理",
+			"item": [
+				{
+					"name": "查询所有用户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/user/findAll?pageNum=1&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增用户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/user/saveUser?email=hahadasheng@lingting.com&username=009&password=abc123&phoneNum=19188776655&status=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"saveUser"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "hahadasheng@lingting.com"
+								},
+								{
+									"key": "username",
+									"value": "009"
+								},
+								{
+									"key": "password",
+									"value": "abc123"
+								},
+								{
+									"key": "phoneNum",
+									"value": "19188776655"
+								},
+								{
+									"key": "status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/user/findById?userId=GC007",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"findById"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "GC007"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户可添加的角色",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/user/roleCanAddToUser?userId=GC007",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"roleCanAddToUser"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "GC007"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户关联角色",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/user/userConnectRoles?userId=GC007&rolesId=F3F829E8C19E4D4FB10DE0AEF7198F6D&rolesId=2DC1144DE0EE43A89D984AA1BAE55C7B",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"user",
+								"userConnectRoles"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "GC007"
+								},
+								{
+									"key": "rolesId",
+									"value": "F3F829E8C19E4D4FB10DE0AEF7198F6D"
+								},
+								{
+									"key": "rolesId",
+									"value": "2DC1144DE0EE43A89D984AA1BAE55C7B"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "角色管理",
+			"item": [
+				{
+					"name": "所有角色查询",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/role/findAll?pageNum=1&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色添加",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/role/saveRole?roleName=BOSS&roleDesc=老板",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role",
+								"saveRole"
+							],
+							"query": [
+								{
+									"key": "roleName",
+									"value": "BOSS"
+								},
+								{
+									"key": "roleDesc",
+									"value": "老板"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色修改",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/role/updateRole?id=2DC1144DE0EE43A89D984AA1BAE55C7B&roleDesc=马云",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role",
+								"updateRole"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2DC1144DE0EE43A89D984AA1BAE55C7B"
+								},
+								{
+									"key": "roleDesc",
+									"value": "马云"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色可添加的权限",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/role/permissionCanAddToRole?roleId=F3F829E8C19E4D4FB10DE0AEF7198F6D",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role",
+								"permissionCanAddToRole"
+							],
+							"query": [
+								{
+									"key": "roleId",
+									"value": "F3F829E8C19E4D4FB10DE0AEF7198F6D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "角色与权限关联",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/role/roleConnectPermission?roleId=F3F829E8C19E4D4FB10DE0AEF7198F6D&permissionId=7C07DE3928854C9A8BA7AFB81884BD7F&permissionId=4033F750B79E4872BB6B47DED747FDD0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role",
+								"roleConnectPermission"
+							],
+							"query": [
+								{
+									"key": "roleId",
+									"value": "F3F829E8C19E4D4FB10DE0AEF7198F6D"
+								},
+								{
+									"key": "permissionId",
+									"value": "7C07DE3928854C9A8BA7AFB81884BD7F"
+								},
+								{
+									"key": "permissionId",
+									"value": "4033F750B79E4872BB6B47DED747FDD0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "权限管理",
+			"item": [
+				{
+					"name": "分页查询所有权限信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/permission/findAll?pageNum=1&pageSize=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"permission",
+								"findAll"
+							],
+							"query": [
+								{
+									"key": "pageNum",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "新增权限",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost/permission/savePermission?permissionName=查询订单详情&url=/order/findById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"permission",
+								"savePermission"
+							],
+							"query": [
+								{
+									"key": "permissionName",
+									"value": "查询订单详情"
+								},
+								{
+									"key": "url",
+									"value": "/order/findById"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "日志信息",
+			"item": [
+				{
+					"name": "分页查询日志",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

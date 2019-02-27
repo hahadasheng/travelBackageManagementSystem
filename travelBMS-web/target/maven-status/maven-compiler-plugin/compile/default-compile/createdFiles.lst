@@ -1,0 +1,4 @@
+com\lingting\travel\controller\UserController.class
+com\lingting\travel\controller\OrderController.class
+com\lingting\travel\controller\RoleController.class
+com\lingting\travel\controller\ProductController.class
