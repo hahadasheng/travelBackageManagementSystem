@@ -1,8 +1,0 @@
-com\lingting\travel\domain\Product.class
-com\lingting\travel\domain\Permission.class
-com\lingting\travel\domain\Member.class
-com\lingting\travel\domain\ResponseMsg.class
-com\lingting\travel\domain\Traveller.class
-com\lingting\travel\domain\Orders.class
-com\lingting\travel\domain\Role.class
-com\lingting\travel\domain\UserInfo.class
