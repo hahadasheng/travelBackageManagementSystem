@@ -17,12 +17,16 @@
     <!-- auto-config="true" 默认使用框架提供的简洁的登陆页面
     use-expressions="false" 是否使用SPEL表达式，(这里就不使用，可以问度娘去学习)
      -->
-    <security:http auto-config="true" use-expressions="false">
+    <security:http auto-config="true" use-expressions="true">
 
         <!--
         pattern 拦截的规则，支持部分正则，
         access  访问系统的用户所需要的角色列表，满足一个即可 -->
-        <security:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN" />
+        <security:intercept-url pattern="/**" access="@permissionService.hasPermission(request,authentication)" />
+
+        <!-- 如果不使用 动态验证，将上面的注释掉，使用下面的配置
+        <security:intercept-url pattern="/**" access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')" />
+        -->
 
         <!-- 自定义登陆页面，
         login-page 登陆页面

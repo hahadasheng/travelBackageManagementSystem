@@ -1,0 +1,71 @@
+
+<!-- 内容区域 -->
+<!-- 内容头部 -->
+<section class="content-header">
+    <h1>
+        用户管理 <small>添加角色表单</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="../index.jsp"><i
+                class="fa fa-dashboard"></i> 首页</a></li>
+        <li><a
+                href="../user/findAll.do">用户管理</a></li>
+        <li class="active">添加角色表单</li>
+    </ol>
+</section>
+<!-- 内容头部 /-->
+<form
+        action="../user/addRoleToUser.do"
+        method="post">
+    <!-- 正文区域 -->
+    <section class="content"> <input type="hidden" name="userId"
+                                     value="1">
+        <table id="dataList"
+               class="table table-bordered table-striped table-hover dataTable">
+            <thead>
+            <tr>
+                <th class="" style="padding-right: 0px">
+                    <input id="selall"
+                           type="checkbox" class="icheckbox_square-blue"></th>
+                <th class="sorting_asc">ID</th>
+                <th class="sorting">角色名称</th>
+                <th class="sorting">角色描述</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input name="ids" type="checkbox" value="2">
+                </td>
+                <td>2</td>
+                <td>user</td>
+                <td>普通用户</td>
+            </tr>
+            <tr>
+                <td><input name="ids" type="checkbox" value="3">
+                </td>
+                <td>3</td>
+                <td>guest</td>
+                <td>测试帐号</td>
+            </tr>
+            </tbody>
+        </table>
+        <!--订单信息/--> <!--工具栏-->
+        <div class="box-tools text-center">
+            <button type="submit" class="btn bg-maroon">保存</button>
+            <button type="button" class="btn bg-default"
+                    onclick="history.back(-1);">返回</button>
+        </div>
+        <!--工具栏/--> </section>
+    <!-- 正文区域 /-->
+</form>
+
+<!-- js区域 -->
+<script>
+    $(document).ready(function () {
+        init();
+    });
+
+</script>
+
+
+

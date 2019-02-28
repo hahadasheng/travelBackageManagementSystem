@@ -1,7 +1,9 @@
 package com.lingting.travel.service;
 
 import com.lingting.travel.domain.Permission;
+import org.springframework.security.core.Authentication;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 public interface PermissionService {
@@ -11,4 +13,7 @@ public interface PermissionService {
 
     /** 添加权限 permission */
     public Integer savePermission(Permission permission);
+
+    /** 动态权限验证 */
+    public Boolean hasPermission(HttpServletRequest request, Authentication authentication);
 }
